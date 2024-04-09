@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %} APPOINTMENT{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #ebd5d5;
+    }
+    .appointment-form {
+        background-color: #17a2b8;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<div class="container " >
+    <h1 class="text-center mt-5 mb-4" style="color:#c54c82;">Make An Appointment</h1>
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <div class="appointment-form" style="background-color: #685454; color: white;">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }} 
+                    <button class="btn btn-block mt-4" style="background-color:#ea8a8a; color: white;" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

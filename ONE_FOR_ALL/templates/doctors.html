@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %} DOCTORS{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #ebd5d5;
+    }
+    .card {
+        width: 18rem;
+        display: inline-block;
+        margin: 0 10px 20px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+    .card-body {
+        background-color: #685454;
+        color: #fff;
+        border: 2px solid #ea8a8a;
+    }
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .card-text {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    .department {
+        font-size: 0.9rem;
+    }
+</style>
+
+<h1 class="text-center mt-5 mb-4" style="color:#c54c82;">Our Doctors</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        {% for d in doctors %}
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{ d.doc_image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Dr. {{ d.doc_name }}</h5>
+                    <p class="card-text">{{ d.doc_spec }}</p>
+                    <p class="department">{{ d.dep_name }} Department</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+
+<style>
+    /* Add custom styles for the about page here */
+    body {
+        background-color:#f2f2f2; /* Light background color */
+    }
+    .about-section {
+        background-color: #685454; /* Light pink background color */
+        color:#ebd5d5;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .team-section {
+        background-color: #efbfc6; /* Dark brown background color */
+        color:  #685454;  
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    /* Styling for quotes */
+    .quote {
+        font-style: italic; /* Italicize the quote */
+        color: #c54c82; /* Custom text color for the quote */
+        margin-top: 20px; /* Add some space above the quote */
+    }
+</style>
+
+<div class="container">
+    <h1 class="text-center mt-5 mb-4" style="color:#c54c82;">About Us</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="about-section">
+                <h2 class="strong text-center"  style="color:#ea8a8a" >Who We Are and What We Do</h2>
+                <p class="lead" style="color:#ea8a8a">Welcome to Our Hospital – A Beacon of Hope and Healing</p>
+                <p class="quote" style="color:#ebd5d5">At Our Hospital, we are committed to providing exceptional healthcare services to every individual who entrusts us with their well-being. Our mission is to serve as a pillar of support and healing within the community, offering compassionate care and personalized treatment.</p>
+                <p class="quote" style="color:#ebd5d5">With a dedicated team of medical professionals, state-of-the-art facilities, and a patient-centered approach, we strive to make a meaningful difference in the lives of those we serve. From preventive care to specialized treatments, we are here to support you at every step of your healthcare journey.</p>
+                <!-- Add an inspirational quote -->
+                <p class="quote" style="color:#ea8a8a">"Health is a state of complete physical, mental and social well-being, and not merely the absence of disease or infirmity." - World Health Organization</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="team-section">
+                <h2 class="text-center" style="color:#ea8a8a" >Our Team</h2>
+                <p class="quote" style="color:#8a0f0f">Meet Our Team of Experts Who Are Dedicated to Your Well-being</p>
+                <p class="quote" style="color:#8a0f0f">Our team comprises experienced physicians, compassionate nurses, and skilled support staff, all united by a common goal: to provide comprehensive medical care with empathy and professionalism. Each member of our team brings unique expertise and dedication to their respective roles, ensuring that you receive the highest quality of care.</p>
+                <p class="quote" style="color:#8a0f0f">From primary care physicians to specialists in various fields, our team collaborates seamlessly to develop tailored treatment plans that address your individual needs. We are committed to fostering a supportive and inclusive environment where patients feel valued, respected, and empowered.</p>
+                <!-- Add another inspirational quote -->
+                <p class="quote" style="color:#ea8a8a">"The art of medicine consists of amusing the patient while nature cures the disease." - Voltaire</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

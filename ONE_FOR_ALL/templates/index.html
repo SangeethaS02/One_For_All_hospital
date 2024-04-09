@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %} HOME{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+    /* Add any custom styles for the homepage here */
+    .carousel-item img {
+        height: 500px; /* Adjust height as needed */
+        object-fit: cover; /* Ensure images cover the entire carousel */
+    }
+    .feature-section {
+        background-color: #f8f9fa; /* Light background color */
+        padding: 50px 0; /* Add padding to the feature section */
+    }
+    .feature {
+        text-align: center; /* Center align feature content */
+        margin-bottom: 30px; /* Add some space between features */
+    }
+    .feature h3 {
+        color: #c54c82; /* Feature title color */
+    }
+    .feature p {
+        color: #132743; /* Feature text color */
+    }
+</style>
+
+<style>
+    .mydivstyle:hover{
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      transform: translateY(-20px);
+    }
+  </style>
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static '/imgs/img1.jpeg'%}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:#c54c82;">ONE FOR ALL</h5>
+                <p style="color:#407088;">Stay Safe, Stay Healthy</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static '/imgs/img2.jpeg'%}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:#c54c82;">ONE FOR ALL</h5>
+                <p style="color:#132743;">Stay Safe, Stay Healthy</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{% static '/imgs/img6.jpeg'%}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 style="color:#c54c82;">ONE FOR ALL</h5>
+                <p style="color:#407088;" >Stay Safe, Stay Healthy</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container feature-section">
+    <div class="row">
+        <div class="col-md-4 mydivstyle">
+            <div class="feature">
+                <h3>Quality Care</h3>
+                <p>Providing exceptional healthcare services with a focus on quality and compassion.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mydivstyle">
+            <div class="feature">
+                <h3>Experienced Team</h3>
+                <p>Our dedicated team of medical professionals ensures you receive the best care possible.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mydivstyle">
+            <div class="feature">
+                <h3>Advanced Technology</h3>
+                <p>Utilizing state-of-the-art technology to deliver innovative and effective treatments.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

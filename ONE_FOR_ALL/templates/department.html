@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} DEPARTMENT{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-color: #ebd5d5;
+    }
+    .department-card {
+        background-color: #685454;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    .department-title {
+        color: #ea8a8a;
+    }
+</style>
+
+<h1 class="text-center mt-5 mb-4" style="color:#c54c82;">Our Departments</h1>
+
+<div class="container">
+    {% for d in dept %}
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="department-card">
+                <h2 class="department-title text-center">{{ d.dep_name }}</h2>
+                <p class="text-center" style="color: white;">{{ d.dep_description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

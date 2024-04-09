@@ -1,0 +1,49 @@
+{% include "base.html" %}
+
+
+<style>
+  .mydivstyle:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    transform: translateY(-20px);
+  }
+</style>
+<style>
+  body {
+      background-color: #ebd5d5;
+  }
+</style>
+
+
+{% block content %}
+<div class="container text-center">
+    <h1 class = "text-center" style="color:#c54c82;"> Contact Us</h1>
+    <div class="row mt-5 text-center">
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+            </svg> <i style="color:#ea8a8a;"> Contact</i></h4>
+            <p class="font-weight-bold mt-3"><a href ="tel:+91 9876543210">+91 9876543210</a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-envelope-arrow-down-fill" viewBox="0 0 16 16">
+            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zm.192 8.159 6.57-4.027L8 9.586l1.239-.757.367.225A4.49 4.49 0 0 0 8 12.5c0 .526.09 1.03.256 1.5H2a2 2 0 0 1-1.808-1.144M16 4.697v4.974A4.5 4.5 0 0 0 12.5 8a4.5 4.5 0 0 0-1.965.45l-.338-.207z"/>
+            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.354-1.646a.5.5 0 0 1-.722-.016l-1.149-1.25a.5.5 0 1 1 .737-.676l.28.305V11a.5.5 0 0 1 1 0v1.793l.396-.397a.5.5 0 0 1 .708.708z"/>
+          </svg><i style="color:#ea8a8a;"> Send-Email</i></h4>
+          <p class="font-weight-bold mt-3"><a href ="mailto:oneforall@gmail.com">oneforall@gmail.com</a></p>
+      </div>
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg><i class = aria-hidden ="true" style="color:#ea8a8a;"> Office Address</i></h4>
+          <p class="font-weight-bold mt-3"><a href="http://maps.google.com/maps?q=palakkad">palakkad</a></p>
+      </div>    
+      <div class="col-lg-3 col-sm-6 mydivstyle">
+        <h4><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/>
+          </svg><i style="color:#ea8a8a;"> Office Time</i></h4>
+          <p class="text-dark font-weight-bold mt-3">10AM to 5PM</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
